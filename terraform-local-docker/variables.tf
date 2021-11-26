@@ -40,6 +40,6 @@ variable "container_count" {
 
 # Definition local values
 locals {
-  container_count = length(var.ext_port)
+  container_count = length(lookup(var.ext_port,var.env))
 }
 
