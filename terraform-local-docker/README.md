@@ -42,7 +42,9 @@ Mapping variables is useful when defining variables than can have multiple value
 _lookup(var.image,var.env)_
 
 ## Terraform workspaces
-In terraform, workspaces allow you to have multiple states, one by workspaces. These are some useful commands to know.
+In terraform, workspaces allow you to have multiple states, one by workspaces. At the same time, you can use the variable terraform.workspace in your terraform files to reference to the workspace and using it as a environment variable.
+
+These are some useful commands to know.
 ``
 terraform workspace list # List workspaces created
 terraform workspace show # Shows the current workspace
