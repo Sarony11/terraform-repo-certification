@@ -19,7 +19,3 @@ variable "ext_port_in" {
 variable "container_path_in" {
     description = "Container path."
 }
-
-variable "host_path_in" {
-    description = "Host path."
-}

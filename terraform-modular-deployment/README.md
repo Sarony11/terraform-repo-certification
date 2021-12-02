@@ -25,3 +25,17 @@ This relation will be also visible in our terraform graph, relating one object t
 Using a new argument, depends_on = [resource_name] you can explicit indicates that resources is depending in another one.
 
 For instance, we will add depends_on = [null_resource.dockervol] to indicate this dependency, inside the docker_container - nodered_container resource.
+
+## Outputs
+For some reason, outputs in modules are not displayed properly. The need to be linked with outputs in root.
+
+You can check the /outputs.tf and /container/outputs.tf files to see the relation between them.
+
+## Lifecycle
+https://www.terraform.io/docs/language/meta-arguments/lifecycle.html
+
+create_before_destroy (bool): Creates a replica resource before its destruction. 
+prevent_destroy (bool): This resource is not destroyed when terraform destroy applies.
+ignore_changes(list): Changes in the terraform configuration does not take efect in this resource.
+
+We use it on /container/main.tf resource "docker_volume" "container_volume"

@@ -1,3 +1,4 @@
- resource "docker_image" "nodered_image" {
-  name = "nodered/node-red:latest"
+ resource "docker_image" "container_image" {
+  #name = "nodered/node-red:latest-minimal"
+  name = var.image_in
  }
